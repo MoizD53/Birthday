@@ -137,7 +137,7 @@ export default function MemoryGallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="w-full md:col-span-10 md:col-start-2 relative aspect-[3/4] md:aspect-[16/9] mt-12 md:mt-16 group"
+            className="w-full md:col-span-8 md:col-start-3 relative aspect-[3/4] md:aspect-[4/5] mt-12 md:mt-16 group"
           >
             <div className="w-full h-full relative overflow-hidden bg-secondary border border-gold/10">
               <ClickableImage 
@@ -145,11 +145,11 @@ export default function MemoryGallery() {
                 alt="Memory 5" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 80vw"
-                className="object-cover md:grayscale-[20%] group-hover:grayscale-0 transition-transform duration-1000 object-top"
+                className="object-cover md:grayscale-[20%] group-hover:grayscale-0 transition-transform duration-1000 object-center"
               />
             </div>
-            <div className="absolute bottom-0 right-0 w-full p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent pointer-events-none text-right">
-              <p className="text-[clamp(0.65rem,2.5vw,0.8rem)] tracking-widest text-gold uppercase">
+            <div className="absolute bottom-0 right-0 w-full p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent pointer-events-none text-right z-10">
+              <p className="text-[clamp(0.65rem,2.5vw,0.8rem)] tracking-widest text-gold uppercase drop-shadow-md">
                 {memories[4].caption}
               </p>
             </div>
