@@ -38,7 +38,8 @@ export const birthdayData = {
     { src: "/images/media_1789492234956.png", caption: "One of those days." },
     { src: "/images/media_1789492321641.jpg", caption: "Unforgettable." },
     { src: "/images/media_1789492327987.jpg", caption: "Family." },
-    { src: "/images/media_1789492283549.png", caption: "A father." }
+    { src: "/images/media_1789492283549.png", caption: "A father." },
+    { src: "/images/media_1789495499132.jpg", caption: "The Boys." }
   ],
   letter: `Dear Dad,
 
