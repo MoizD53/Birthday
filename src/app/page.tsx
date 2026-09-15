@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import BirthdayLock from "@/components/BirthdayLock";
 import Hero from "@/components/Hero";
 import AgeSection from "@/components/AgeSection";
-import DadStory from "@/components/DadStory";
 import Timeline from "@/components/Timeline";
 import MemoryGallery from "@/components/MemoryGallery";
 import ThankYouSection from "@/components/ThankYouSection";
@@ -36,7 +35,6 @@ export default function Home() {
           <>
             <Hero />
             <AgeSection />
-            <DadStory />
             <Timeline />
             <MemoryGallery />
             <ThankYouSection />
