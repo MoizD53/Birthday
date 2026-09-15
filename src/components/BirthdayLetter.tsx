@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { birthdayData } from "@/data/birthdayData";
 import { useState } from "react";
+import { Heart } from "lucide-react";
 
 export default function BirthdayLetter() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,15 +23,24 @@ export default function BirthdayLetter() {
               exit={{ scale: 1.1, opacity: 0, filter: "blur(10px)" }}
               transition={{ duration: 0.8 }}
               onClick={() => setIsOpen(true)}
-              className="absolute inset-0 m-auto w-full max-w-sm h-64 bg-[#2A0E13] border border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center cursor-pointer group hover:border-gold/50 transition-colors"
+              className="absolute inset-0 m-auto w-full max-w-sm h-64 bg-[#2A0E13] border border-gold/40 shadow-[0_30px_60px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center cursor-pointer group hover:border-gold/60 transition-colors overflow-hidden"
             >
-              <div className="absolute inset-2 border border-gold/10 pointer-events-none"></div>
+              <div className="absolute inset-0 velvet-texture opacity-50 mix-blend-overlay"></div>
               
-              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-6 bg-[#1A050A] group-hover:scale-110 transition-transform duration-500">
-                <span className="font-serif text-gold text-xl italic">M</span>
+              <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 group-hover:opacity-60 transition-opacity" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon points="0,0 100,0 50,55" fill="#1A050A" stroke="#D6B36A" strokeWidth="0.5" />
+                <polygon points="0,100 0,0 50,55" fill="transparent" stroke="#D6B36A" strokeWidth="0.5" />
+                <polygon points="100,100 100,0 50,55" fill="transparent" stroke="#D6B36A" strokeWidth="0.5" />
+              </svg>
+
+              <div className="absolute inset-1 border border-gold/10 pointer-events-none"></div>
+              
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#7A1522] to-[#3B0A11] border-2 border-gold shadow-[0_5px_15px_rgba(0,0,0,0.6),inset_0_2px_5px_rgba(255,255,255,0.1)] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-700 z-10">
+                <div className="absolute inset-[3px] rounded-full border border-gold/30"></div>
+                <Heart className="w-6 h-6 text-gold fill-gold/60 drop-shadow-md" />
               </div>
               
-              <p className="text-gold/80 uppercase tracking-widest text-xs font-semibold group-hover:text-gold transition-colors">
+              <p className="text-gold uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold group-hover:text-light-gold transition-colors z-10 drop-shadow-md bg-[#2A0E13]/80 px-4 py-1.5 rounded-full backdrop-blur-md border border-gold/20">
                 Tap to Open Letter
               </p>
             </motion.div>
